@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm2/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="SHAFTS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SHAFTS,UP,DOWN))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p5"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="DOWN" org.eventb.core.type="ℙ(SHAFTS)"/>
+<org.eventb.core.prIdent name="UP" org.eventb.core.type="ℙ(SHAFTS)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="SHAFTS=UP∪DOWN"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(UP)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(SHAFTS,UP,DOWN)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(UP)∧finite(DOWN)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="UP∩DOWN=(∅ ⦂ ℙ(SHAFTS))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(DOWN)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

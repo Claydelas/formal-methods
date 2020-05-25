@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590419828183" org.eventb.texttools.text_representation="machine m1_shafts refines m0_cabins  sees m1_shafts_context&#10;&#10;variables cabin_floor cabin_shaft&#10;&#10;invariants&#10;@inv2 cabin_shaft ∈ CABINS → SHAFTS&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  then&#10;  @act2 cabin_shaft ≔ CABINS × {UP}&#10;  end&#10;&#10;  event CabinMovesDown extends CabinMovesDown&#10;  end&#10;&#10;  event CabinMovesUp extends CabinMovesUp&#10;  end&#10;&#10;  event CabinUpToDown&#10;    any cabin&#10;    where&#10;      @grd1 cabin_floor(cabin) = TOP_FLOOR&#10;&#10;      end&#10;&#10;  event CabinDownToUp&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_NmRKUJ6GEeqJfrVoS3SLOQ" org.eventb.core.target="m0_cabins"/>
+<org.eventb.core.seesContext name="_PX0ngJ6GEeqJfrVoS3SLOQ" org.eventb.core.target="m1_shafts_context"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_tXgXQJ6aEeqVQ6qy3MLSjQ" org.eventb.core.assignment="cabin_shaft ≔ CABINS × {UP}" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bFTTkJ6MEeqJfrVoS3SLOQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinMovesDown">
+<org.eventb.core.refinesEvent name="_bFT6oJ6MEeqJfrVoS3SLOQ" org.eventb.core.target="CabinMovesDown"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_bFT6oZ6MEeqJfrVoS3SLOQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinMovesUp">
+<org.eventb.core.refinesEvent name="_bFUhsJ6MEeqJfrVoS3SLOQ" org.eventb.core.target="CabinMovesUp"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_M9kucJ6NEeqJfrVoS3SLOQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinUpToDown">
+<org.eventb.core.parameter name="_M9lVgJ6NEeqJfrVoS3SLOQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabin"/>
+<org.eventb.core.guard name="_M9l8kJ6NEeqJfrVoS3SLOQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="cabin_floor(cabin) = TOP_FLOOR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_M9mjoJ6NEeqJfrVoS3SLOQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinDownToUp"/>
+<org.eventb.core.variable name="_zIqdkJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabin_floor"/>
+<org.eventb.core.variable name="_SvtZQJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabin_shaft"/>
+<org.eventb.core.invariant name="_hdnYIJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="cabin_shaft ∈ CABINS → SHAFTS"/>
+</org.eventb.core.machineFile>

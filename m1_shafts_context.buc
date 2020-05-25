@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590419588264" org.eventb.texttools.text_representation="context m1_shafts_context extends m0_cabins_context&#10;&#10;sets SHAFTS&#10;&#10;constants UP DOWN&#10;&#10;axioms&#10;@axm7 finite(SHAFTS)&#10;@axm6 partition(SHAFTS, {UP}, {DOWN})&#10;&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_IuJPsJ6EEeq9QKfOiT4EOw" org.eventb.core.target="m0_cabins_context"/>
+<org.eventb.core.carrierSet name="_PYhbAJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="SHAFTS"/>
+<org.eventb.core.constant name="_PYiCEJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="UP"/>
+<org.eventb.core.constant name="_PYiCEZ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="DOWN"/>
+<org.eventb.core.axiom name="_PYipIJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="axm7" org.eventb.core.predicate="finite(SHAFTS)"/>
+<org.eventb.core.axiom name="_PYjQMJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="axm6" org.eventb.core.predicate="partition(SHAFTS, {UP}, {DOWN})"/>
+</org.eventb.core.contextFile>
