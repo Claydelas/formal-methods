@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
 <org.eventb.core.poIdentifier name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
@@ -14,248 +14,283 @@
 <org.eventb.core.poPredicate name="CABIN_FLOOY" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Rn7VMJ7DEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poPredicate name="CABIN_FLOOZ" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Ms0vIJ6tEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poPredicate name="CABIN_FLOO[" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Ms1WMJ6tEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="UP∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_QMwJ8J6-EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="DOWN∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_QMwxAJ6-EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO^" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(UP)⇒UP(c)∉ran({c} ⩤ UP)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_QMxYEJ6-EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO_" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(DOWN)⇒DOWN(c)∉ran({c} ⩤ DOWN)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_QMx_IJ6-EeqVQ6qy3MLSjQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="down" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="up" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poPredicate name="cabin_floos" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_L_76IZ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="cabin_floot" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_WepwMJ6aEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poIdentifier name="down_cabins" org.eventb.core.type="ℙ(CABINS)"/>
+<org.eventb.core.poIdentifier name="down_shaft" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="up_cabins" org.eventb.core.type="ℙ(CABINS)"/>
+<org.eventb.core.poIdentifier name="up_shaft" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poPredicate name="down_cabint" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_vQ22AJ7QEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="down_cabinu" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_vQ3dEJ7QEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexx"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="UP∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSequent name="INITIALISATION/up_down_unique/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CABINS∩(∅ ⦂ ℙ(CABINS))=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexx"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="DOWN∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexx"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="UP∩DOWN=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/up_down_unique\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contexx" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="down'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poSequent name="INITIALISATION/up_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/up_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/down_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CABINS×ℤ))∈(∅ ⦂ ℙ(CABINS)) → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/down_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/cabins_unique_shaft/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(CABIN_FLOOR)∩dom(∅ ⦂ ℙ(CABINS×ℤ))=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_8hMJ6QEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#INITIALISATION\/cabins_unique_shaft\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex{" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="down_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="down_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
 <org.eventb.core.poIdentifier name="cabin_floor'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="up'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="up_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="up_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contexx" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contexx" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poSequent name="CabinMovesDown/not_at_ground_floor/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexy("/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down)∧down∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUJ7BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUJ7BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexy("/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex{" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex{" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="CabinMovesDown/not_at_ground_floor1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabir"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down_shaft)∧down_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosZ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosZ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabir"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesDown/lower_floor_free/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexycabip"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down)∧down∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUZ7BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUZ7BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexycabip"/>
+<org.eventb.core.poSequent name="CabinMovesDown/lower_floor_free1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabis"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down_shaft)∧down_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosp7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosp7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabis"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesDown/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexy"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="down{cabin1 ↦ down(cabin1) − 1}∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSequent name="CabinMovesDown/down_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="down_shaft{cabin1 ↦ down_shaft(cabin1) − 1}∈down_cabins → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesDown\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesDown\/down_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesDown/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexy"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="up∩(down{cabin1 ↦ down(cabin1) − 1})=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSequent name="CabinMovesDown/cabins_unique_shaft/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(up_shaft)∩dom(down_shaft{cabin1 ↦ down_shaft(cabin1) − 1})=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesDown\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesDown\/cabins_unique_shaft\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesDown/move_down/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexy"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down)∧down∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_qyEUU57BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_qyEUU57BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexy"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contexy" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.poIdentifier name="down'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="cabin_floor'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="cabin1" org.eventb.core.type="CABINS"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contexy(" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contexy" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="0≤cabin_floor(cabin) − 1" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_L_-WYp6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cabin_floor(cabin) − 1∉ran(cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_xEo64J6bEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contexycabip" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexy(" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="0≤down(cabin1) − 1" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUJ7BEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contexy" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexycabip" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="down(cabin1) − 1∉ran(down)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUZ7BEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="cabin1∉dom(up)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_qyEUUp7BEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="CabinMovesUp/not_at_top_floor/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexz("/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up)∧up∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgJ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgJ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexz("/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesUp/upper_floor_free/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexzcabip"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up)∧up∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgZ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgZ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexzcabip"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesUp/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexz"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="up{cabin1 ↦ up(cabin1)+1}∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesUp\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesUp/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexz"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(up{cabin1 ↦ up(cabin1)+1})∩down=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesUp\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinMovesUp/move_up/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexz"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up)∧up∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_vgKQkJ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_vgKQkJ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexz"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contexz" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.poIdentifier name="cabin_floor'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="cabin1" org.eventb.core.type="CABINS"/>
-<org.eventb.core.poIdentifier name="up'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contexz(" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contexz" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TOP_FLOOR≥cabin_floor(cabin)+1" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_L_9vUJ6QEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cabin_floor(cabin)+1∉ran(cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_YkhbEJ6bEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contexzcabip" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexz(" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="TOP_FLOOR≥up(cabin1)+1" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgJ7AEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contexz" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contexzcabip" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="up(cabin1)+1∉ran(up)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_vgJpgZ7AEeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="cabin1∉dom(down)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_YAg50J7BEeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="CabinUpToDown/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex{'"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin∈dom(up)∧up∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex{'"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinUpToDown/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{cabin} ⩤ up∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinUpToDown/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="down∪{cabin ↦ TOP_FLOOR}∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinUpToDown/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex{"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{cabin} ⩤ up∩(down∪{cabin ↦ TOP_FLOOR})=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex{" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.poIdentifier name="down'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="up'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex{'" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex{" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cabin∈dom(up)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_rQhkMJ68EeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex{" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex{'" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="up(cabin)=TOP_FLOOR" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin∉dom(down)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RSyvgJ6_EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="TOP_FLOOR∉ran(down)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_iGrOUJ69EeqVQ6qy3MLSjQ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="CabinDownToUp/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|'"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin∈dom(down)∧down∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|'"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinDownToUp/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="CabinMovesDown/move_down2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="up∪{cabin ↦ 0}∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinDownToUp/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{cabin} ⩤ down∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="CabinDownToUp/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(up∪{cabin ↦ 0})∩({cabin} ⩤ down)=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(down_shaft)∧down_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_eOVMUJ7UEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_eOVMUJ7UEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex|" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="down_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 <org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.poIdentifier name="down'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.poIdentifier name="up'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="cabin_floor'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="cabin1" org.eventb.core.type="CABINS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex|'" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex\|" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cabin∈dom(down)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RSz9oZ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex|cabir" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex\|" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="0≤cabin_floor(cabin) − 1" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_92DPsJ7OEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cabin_floor(cabin) − 1∉ran(cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_-WYJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_92D2wJ7OEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin1∉dom(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoBoJ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cabin1∉dom(cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_JoM5AJ7YEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="cabin1∈dom(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosJ7XEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex|" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|'" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="down(cabin)=0" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin∉dom(up)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksZ6_EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0∉ran(up)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS1LwJ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex|cabis" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabir" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="0≤down_shaft(cabin1) − 1" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosZ7XEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex|" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex\|cabis" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="down_shaft(cabin1) − 1∉ran(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFTTkJ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_csoosp7XEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CabinMovesUp/not_at_top_floor1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabiq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up_shaft)∧up_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwJ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwJ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabiq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinMovesUp/upper_floor_free1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabir"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up_shaft)∧up_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwZ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwZ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabir"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinMovesUp/up_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="up_shaft{cabin1 ↦ up_shaft(cabin1)+1}∈up_cabins → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesUp\/up_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinMovesUp/cabins_unique_shaft/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(up_shaft{cabin1 ↦ up_shaft(cabin1)+1})∩dom(down_shaft)=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinMovesUp\/cabins_unique_shaft\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinMovesUp/move_up1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin1∈dom(up_shaft)∧up_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_csp20J7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.action#_csp20J7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex}" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
+<org.eventb.core.poIdentifier name="cabin_floor'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="cabin1" org.eventb.core.type="CABINS"/>
+<org.eventb.core.poIdentifier name="up_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex}cabiq" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="TOP_FLOOR≥cabin_floor(cabin)+1" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_92AzcJ7OEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cabin_floor(cabin)+1∉ran(cabin_floor)" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_L_9IQJ6QEeqVQ6qy3MLSjQ|org.eventb.core.guard#_92BagJ7OEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin1∈dom(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_orFXsJ7XEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cabin1∉dom(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_YAg50J7BEeqVQ6qy3MLSjQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex}cabir" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabiq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TOP_FLOOR≥up_shaft(cabin1)+1" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwJ7XEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex}" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex}cabir" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="up_shaft(cabin1)+1∉ran(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_bFT6oZ6MEeqJfrVoS3SLOQ|org.eventb.core.guard#_cspPwZ7XEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CabinUpToDown/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex~*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin∈dom(up_shaft)∧up_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex~*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinUpToDown/up_down_unique/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(up_cabins ∖ {cabin})∩(down_cabins∪{cabin})=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/up_down_unique\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinUpToDown/up_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{cabin} ⩤ up_shaft∈up_cabins ∖ {cabin} → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/up_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinUpToDown/down_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="down_shaft∪{cabin ↦ TOP_FLOOR}∈down_cabins∪{cabin} → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/down_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinUpToDown/cabins_unique_shaft/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom({cabin} ⩤ up_shaft)∩dom(down_shaft∪{cabin ↦ TOP_FLOOR})=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinUpToDown\/cabins_unique_shaft\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex~" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="down_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
+<org.eventb.core.poIdentifier name="down_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
+<org.eventb.core.poIdentifier name="up_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="up_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contex~*" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cabin∈dom(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_rQhkMJ68EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cabin∉dom(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RSyvgJ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin∈up_cabins" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_aXaIoJ7VEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cabin∉down_cabins" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_aXaIoZ7VEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contex~" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contex~*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="up_shaft(cabin)=TOP_FLOOR" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_M9l8kJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TOP_FLOOR∉ran(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9kucJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_iGrOUJ69EeqVQ6qy3MLSjQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CabinDownToUp/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contey''"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cabin∈dom(down_shaft)∧down_shaft∈CABINS ⇸ ℤ" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contey''"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinDownToUp/up_down_unique/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(up_cabins∪{cabin})∩(down_cabins ∖ {cabin})=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/up_down_unique\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinDownToUp/up_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="up_shaft∪{cabin ↦ 0}∈up_cabins∪{cabin} → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/up_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinDownToUp/down_shaft_func_def/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{cabin} ⩤ down_shaft∈down_cabins ∖ {cabin} → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/down_shaft_func_def\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CabinDownToUp/cabins_unique_shaft/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(up_shaft∪{cabin ↦ 0})∩dom({cabin} ⩤ down_shaft)=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poSequent#CabinDownToUp\/cabins_unique_shaft\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contey'" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="down_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
+<org.eventb.core.poIdentifier name="down_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
+<org.eventb.core.poIdentifier name="up_shaft'" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.poIdentifier name="up_cabins'" org.eventb.core.type="ℙ(CABINS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPm1_shafts_contey''" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contey'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cabin∈dom(down_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RSz9oZ6_EeqVQ6qy3MLSjQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPm1_shafts_contey'" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#EVTHYPm1_shafts_contey''" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="down_shaft(cabin)=0" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksJ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cabin∉dom(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS0ksZ6_EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0∉ran(up_shaft)" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_M9mjoJ6NEeqJfrVoS3SLOQ|org.eventb.core.guard#_RS1LwJ6_EeqVQ6qy3MLSjQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="up∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyim0J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="down∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_hyjN4J68EeqVQ6qy3MLSjQ"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="up∩down=(∅ ⦂ ℙ(CABINS×ℤ))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_yzzIYJ68EeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="down_cabins⊆CABINS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssJ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="up_cabins⊆CABINS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Ghl0wJ7VEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="up_cabins∩down_cabins=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_NiQtEJ7TEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="up_shaft∈up_cabins → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_Wmm7EJ7WEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="down_shaft∈down_cabins → FLOORS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssZ7SEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="dom(up_shaft)∩dom(down_shaft)=(∅ ⦂ ℙ(CABINS))" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_gFkssp7SEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

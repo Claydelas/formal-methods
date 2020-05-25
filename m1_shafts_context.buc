@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590437099160" org.eventb.texttools.text_representation="context m1_shafts_context extends m0_cabins_context&#10;&#10;constants UP DOWN&#10;&#10;axioms&#10;&#10;@up UP ∈ CABINS → FLOORS&#10;@down DOWN ∈ CABINS → FLOORS&#10;@avoid_collisions ∀c·c ∈ dom(UP) ⇒  UP(c) ∉ ran({c} ⩤ UP)&#10;@avoid_collisions_2 ∀c·c ∈ dom(DOWN) ⇒  DOWN(c) ∉ ran({c} ⩤ DOWN)&#10;&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590437516309" org.eventb.texttools.text_representation="context m1_shafts_context extends m0_cabins_context&#10;&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="_IuJPsJ6EEeq9QKfOiT4EOw" org.eventb.core.target="m0_cabins_context"/>
-<org.eventb.core.constant name="_PYiCEJ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="UP"/>
-<org.eventb.core.constant name="_PYiCEZ6aEeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.identifier="DOWN"/>
-<org.eventb.core.axiom name="_QMwJ8J6-EeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="up" org.eventb.core.predicate="UP ∈ CABINS → FLOORS"/>
-<org.eventb.core.axiom name="_QMwxAJ6-EeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="down" org.eventb.core.predicate="DOWN ∈ CABINS → FLOORS"/>
-<org.eventb.core.axiom name="_QMxYEJ6-EeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="avoid_collisions" org.eventb.core.predicate="∀c·c ∈ dom(UP) ⇒  UP(c) ∉ ran({c} ⩤ UP)"/>
-<org.eventb.core.axiom name="_QMx_IJ6-EeqVQ6qy3MLSjQ" org.eventb.core.generated="false" org.eventb.core.label="avoid_collisions_2" org.eventb.core.predicate="∀c·c ∈ dom(DOWN) ⇒  DOWN(c) ∉ ran({c} ⩤ DOWN)"/>
 </org.eventb.core.contextFile>
