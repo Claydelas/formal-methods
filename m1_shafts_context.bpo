@@ -14,6 +14,12 @@
 <org.eventb.core.poPredicate name="CABIN_FLOOY" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Rn7VMJ7DEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poPredicate name="CABIN_FLOOZ" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Ms0vIJ6tEeqVQ6qy3MLSjQ"/>
 <org.eventb.core.poPredicate name="CABIN_FLOO[" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.axiom#_Ms1WMJ6tEeqVQ6qy3MLSjQ"/>
+<org.eventb.core.poIdentifier name="SHAFTS" org.eventb.core.type="ℙ(SHAFTS)"/>
+<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="SHAFTS"/>
+<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="SHAFTS"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts_context.bpo|org.eventb.core.poFile#m1_shafts_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts_context.bpo|org.eventb.core.poFile#m1_shafts_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWI59FEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWJJ9FEeq6js3PozKjqQ"/>
+</org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

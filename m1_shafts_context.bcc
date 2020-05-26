@@ -16,4 +16,9 @@
 <org.eventb.core.scConstant name="FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.constant#_dp_W8Z4VEeq9QKfOiT4EOw" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.scConstant name="TOP_FLOOR" org.eventb.core.source="/MULTI-Elevator/m0_cabins_context.buc|org.eventb.core.contextFile#m0_cabins_context|org.eventb.core.constant#_dp_-AJ4VEeq9QKfOiT4EOw" org.eventb.core.type="ℤ"/>
 </org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="m0_cabins_contexu" org.eventb.core.label="axm7" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWI59FEeq6js3PozKjqQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="m0_cabins_contexv" org.eventb.core.label="axm6" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWJJ9FEeq6js3PozKjqQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="DOWN" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.constant#_A8RWIp9FEeq6js3PozKjqQ" org.eventb.core.type="SHAFTS"/>
+<org.eventb.core.scCarrierSet name="SHAFTS" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.carrierSet#_A8RWIJ9FEeq6js3PozKjqQ" org.eventb.core.type="ℙ(SHAFTS)"/>
+<org.eventb.core.scConstant name="UP" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.constant#_A8RWIZ9FEeq6js3PozKjqQ" org.eventb.core.type="SHAFTS"/>
 </org.eventb.core.scContextFile>

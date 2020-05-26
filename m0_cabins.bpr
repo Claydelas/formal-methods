@@ -717,21 +717,21 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="cabin∈CABINS"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="CABINS"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
@@ -754,20 +754,20 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -787,22 +787,22 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="floor(cabin)+1∉ran(floor)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬cabin_floor(cabin)+1∈ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬floor(cabin)+1∈ran(floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="cabin_floor(cabin)+1∉ran(cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -835,21 +835,21 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="cabin∈CABINS"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="CABINS"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
@@ -872,20 +872,20 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -905,22 +905,22 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin∈dom(floor)"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧⊤"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="cabin_floor(cabin) − 1∉ran(cabin_floor)"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(cabin_floor)∧cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="floor(cabin) − 1∉ran(floor)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬cabin_floor(cabin) − 1∈ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin∈dom(floor)∧floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬floor(cabin) − 1∈ran(floor)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -943,22 +943,22 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="c∈dom(floor)⇒floor∈CABINS ⇸ ℤ">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="c∈dom(cabin_floor)⇒cabin_floor∈CABINS ⇸ ℤ">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈dom(cabin_floor)">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈dom(floor)">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor∈CABINS ⇸ ℤ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
@@ -979,14 +979,12 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="CabinMovesUp/up_type/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="CABINS">
+<org.eventb.core.prProof name="CabinMovesUp/up_type/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="CABINS">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p8,p6,p1,p7,p5,p3,p13,p12,p2,p9,p11,p16,p17,p18">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p9,p7,p1,p8,p5,p4,p11,p3,p12,p2,p6,p14">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -995,26 +993,22 @@
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(CABINS)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TOP_FLOOR≥cabin_floor(cabin)+1"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(floor)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="TOP_FLOOR=7"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TOP_FLOOR=7"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬cabin_floor(cabin)+1∈ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin_floor{cabin ↦ cabin_floor(cabin)+1}∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="cabin_floor(cabin)+1∉ran(cabin_floor)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="TOP_FLOOR≥floor(cabin)+1"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor{cabin ↦ floor(cabin)+1}∈CABINS → FLOORS"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
@@ -1023,8 +1017,8 @@
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees c)" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
@@ -1043,7 +1037,7 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p17">
-<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Functional image simplification in goal" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="p2,p7,p8,p11,p17">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
@@ -1063,47 +1057,47 @@
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor{cabin ↦ floor(cabin)+1})⇒(floor{cabin ↦ floor(cabin)+1})(c)∉ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor(cabin)+1∉ran(floor)"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬c=cabin">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬cabin_floor(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TOP_FLOOR≥cabin_floor(cabin)+1"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬({cabin} ⩤ cabin_floor)(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin)+1})">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬cabin_floor(cabin)+1∈ran({cabin} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin)+1})⇒(cabin_floor{cabin ↦ cabin_floor(cabin)+1})(c)∉ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬cabin_floor(cabin)+1∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c∈dom(floor{cabin ↦ floor(cabin)+1})">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="cabin∈dom(cabin_floor{cabin ↦ cabin_floor(cabin)+1})"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin)+1})⇒¬(cabin_floor{cabin ↦ cabin_floor(cabin)+1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor{cabin ↦ floor(cabin)+1})⇒¬(floor{cabin ↦ floor(cabin)+1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬floor(cabin)+1∈ran({cabin} ⩤ (floor{cabin ↦ floor(cabin)+1}))"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬(floor{cabin ↦ floor(cabin)+1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="cabin∈dom(floor{cabin ↦ floor(cabin)+1})"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="TOP_FLOOR≥floor(cabin)+1"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬({cabin} ⩤ floor)(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin)+1})⇒¬(cabin_floor{cabin ↦ cabin_floor(cabin)+1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬cabin_floor(cabin)+1∈ran(cabin_floor)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬floor(cabin)+1∈ran(floor)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c∈dom(floor{cabin ↦ floor(cabin)+1})⇒¬(floor{cabin ↦ floor(cabin)+1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="c=cabin">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬(cabin_floor{cabin ↦ cabin_floor(cabin)+1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin)+1}))">
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬floor(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cabin_floor(cabin)+1∉ran(cabin_floor)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬floor(cabin)+1∈ran({c} ⩤ (floor{cabin ↦ floor(cabin)+1}))">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.funImgSimplifies:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
@@ -1112,14 +1106,12 @@
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.funOvr:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="CabinMovesDown/up_type/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="CABINS">
+<org.eventb.core.prProof name="CabinMovesDown/up_type/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="CABINS">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p7,p5,p1,p6,p4,p2,p12,p11,p15,p8,p10,p16,p17,p18">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10,p9,p7,p1,p8,p5,p4,p11,p3,p13,p2,p6,p14">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -1128,26 +1120,22 @@
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="TOP_FLOOR" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(CABINS)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(FLOORS)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬cabin_floor(cabin) − 1∈ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="TOP_FLOOR=7"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="cabin∈dom(cabin_floor)"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="cabin_floor{cabin ↦ cabin_floor(cabin) − 1}∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="cabin_floor∈CABINS ⇸ ℤ"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="cabin_floor(cabin) − 1∉ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="0≤cabin_floor(cabin) − 1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin∈dom(floor)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(CABINS)&lt;card(FLOORS)∗2"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(FLOORS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor∈CABINS ⇸ ℤ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="FLOORS=0 ‥ TOP_FLOOR"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(FLOORS)=TOP_FLOOR+1"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="TOP_FLOOR=7"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="TOP_FLOOR∈ℕ1"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CABIN_FLOOR∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="floor{cabin ↦ floor(cabin) − 1}∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="0≤floor(cabin) − 1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
@@ -1195,47 +1183,47 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="FLOORS" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="cabin" org.eventb.core.type="CABINS"/>
-<org.eventb.core.prIdent name="cabin_floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+<org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬c=cabin">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})⇒(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})(c)∉ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒cabin_floor(c)∉ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬({cabin} ⩤ cabin_floor)(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬cabin_floor(cabin) − 1∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="floor∈CABINS → FLOORS"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬floor(cabin) − 1∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒¬CABIN_FLOOR(c)∈ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬cabin_floor(cabin) − 1∈ran(cabin_floor)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor)⇒¬cabin_floor(c)∈ran({c} ⩤ cabin_floor)"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})⇒¬(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬(floor{cabin ↦ floor(cabin) − 1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))">
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬floor(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cabin_floor∈CABINS → FLOORS"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabin_floor(cabin) − 1∉ran(cabin_floor)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬floor(cabin) − 1∈ran(floor)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor{cabin ↦ floor(cabin) − 1})⇒(floor{cabin ↦ floor(cabin) − 1})(c)∉ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor{cabin ↦ floor(cabin) − 1})⇒¬(floor{cabin ↦ floor(cabin) − 1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c∈dom(floor{cabin ↦ floor(cabin) − 1})">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(CABIN_FLOOR)⇒CABIN_FLOOR(c)∉ran({c} ⩤ CABIN_FLOOR)">
 <org.eventb.core.prIdent name="CABIN_FLOOR" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c∈dom(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})⇒¬(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="0≤cabin_floor(cabin) − 1"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬cabin_floor(cabin) − 1∈ran({cabin} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬cabin_floor(c)∈ran({c} ⩤ (cabin_floor{cabin ↦ cabin_floor(cabin) − 1}))">
-<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒¬floor(c)∈ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="floor(cabin) − 1∉ran(floor)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(floor)⇒floor(c)∉ran({c} ⩤ floor)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="cabin∈dom(floor{cabin ↦ floor(cabin) − 1})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="0≤floor(cabin) − 1"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="c=cabin">
 <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="cabin∈dom(cabin_floor{cabin ↦ cabin_floor(cabin) − 1})"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c∈dom(floor{cabin ↦ floor(cabin) − 1})⇒¬(floor{cabin ↦ floor(cabin) − 1})(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬floor(cabin) − 1∈ran({cabin} ⩤ (floor{cabin ↦ floor(cabin) − 1}))"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬({cabin} ⩤ floor)(c)∈ran({c} ⩤ (floor{cabin ↦ floor(cabin) − 1}))">
+<org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.funImgSimplifies:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
