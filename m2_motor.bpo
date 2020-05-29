@@ -17,13 +17,13 @@
 <org.eventb.core.poIdentifier name="SHAFTS" org.eventb.core.type="ℙ(SHAFTS)"/>
 <org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="SHAFTS"/>
 <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="SHAFTS"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWI59FEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWJJ9FEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy9zQKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy-aUKFQEeq6js3PozKjqQ"/>
 <org.eventb.core.poIdentifier name="MOTOR_STATE" org.eventb.core.type="ℙ(MOTOR_STATE)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MOTOR_STATE"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MOTOR_STATE"/>
-<org.eventb.core.poPredicate name="MOTOR_STATF" org.eventb.core.predicate="finite(MOTOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#__eEHkp-YEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="MOTOR_STATG" org.eventb.core.predicate="partition(MOTOR_STATE,{ON},{OFF})" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#__eEuoJ-YEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="MOTOR_STATF" org.eventb.core.predicate="finite(MOTOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#_brXfUKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="MOTOR_STATG" org.eventb.core.predicate="partition(MOTOR_STATE,{ON},{OFF})" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#_brXfUaFQEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
@@ -32,13 +32,13 @@
 <org.eventb.core.poPredicate name="shafu" org.eventb.core.predicate="floor∈CABINS → FLOORS" org.eventb.core.source="/MULTI-Elevator/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_aweL0J94Eeq6js3PozKjqQ"/>
 <org.eventb.core.poPredicate name="shafv" org.eventb.core.predicate="shaft∈CABINS → SHAFTS" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.invariant#_G2fpUJ97Eeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="INITIALISATION/motor_type/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contexw"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CABINS × {OFF}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CABINS × {OFF}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#INITIALISATION\/motor_type\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contexw" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
@@ -125,12 +125,12 @@
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_sL6W4J-XEeq6js3PozKjqQ|org.eventb.core.guard#_lSEfUJ-ZEeq6js3PozKjqQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex\|"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="MotorStarts/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="MotorStarts/motor_type/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex\|"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="motor{cabin ↦ ON}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="motor{cabin ↦ ON}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_sL6W4J-XEeq6js3PozKjqQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#MotorStarts\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#MotorStarts\/motor_type\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex|" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
@@ -146,12 +146,12 @@
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_sL698Z-XEeq6js3PozKjqQ|org.eventb.core.guard#_lSFGYZ-ZEeq6js3PozKjqQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#EVTIDENTm1_shafts_contex}"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="MotorStops/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="MotorStops/motor_type/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#EVTALLHYPm1_shafts_contex}"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="motor{cabin ↦ OFF}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="motor{cabin ↦ OFF}∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_sL698Z-XEeq6js3PozKjqQ"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#MotorStops\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poSequent#MotorStops\/motor_type\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTm1_shafts_contex}" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
@@ -162,6 +162,6 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="motor(cabin)=ON" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_sL698Z-XEeq6js3PozKjqQ|org.eventb.core.guard#_lSFGYZ-ZEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor.bpo|org.eventb.core.poFile#m2_motor|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="motor∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_VKszIZ-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="motor∈CABINS → MOTOR_STATE" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.invariant#_OtKD0KFNEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

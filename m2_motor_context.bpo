@@ -17,14 +17,14 @@
 <org.eventb.core.poIdentifier name="SHAFTS" org.eventb.core.type="ℙ(SHAFTS)"/>
 <org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="SHAFTS"/>
 <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="SHAFTS"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWI59FEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWJJ9FEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy9zQKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy-aUKFQEeq6js3PozKjqQ"/>
 <org.eventb.core.poIdentifier name="MOTOR_STATE" org.eventb.core.type="ℙ(MOTOR_STATE)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MOTOR_STATE"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MOTOR_STATE"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m2_motor_context.bpo|org.eventb.core.poFile#m2_motor_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(MOTOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#__eEHkp-YEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(MOTOR_STATE,{ON},{OFF})" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#__eEuoJ-YEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(MOTOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#_brXfUKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(MOTOR_STATE,{ON},{OFF})" org.eventb.core.source="/MULTI-Elevator/m2_motor_context.buc|org.eventb.core.contextFile#m2_motor_context|org.eventb.core.axiom#_brXfUaFQEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590531384711" org.eventb.texttools.text_representation="context m3_door_context extends m2_motor_context&#10;&#10;sets DOOR_STATE&#10;&#10;constants OPEN HALF CLOSED&#10;&#10;axioms&#10;@axm9 finite(DOOR_STATE)&#10;@axm4 partition(DOOR_STATE, {OPEN}, {HALF}, {CLOSED})&#10;end" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590717750949" org.eventb.texttools.text_representation="context m3_door_context extends m2_motor_context&#10;&#10;sets DOOR_STATE&#10;&#10;constants OPEN HALF CLOSED&#10;&#10;axioms&#10;@door_finite finite(DOOR_STATE)&#10;@door partition(DOOR_STATE, {OPEN}, {HALF}, {CLOSED})&#10;end" version="3">
 <org.eventb.core.extendsContext name="'" org.eventb.core.target="m2_motor_context"/>
 <org.eventb.core.carrierSet name="_Gf0g0J-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="DOOR_STATE"/>
 <org.eventb.core.constant name="_Gf1H4J-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="OPEN"/>
 <org.eventb.core.constant name="_Gf1H4Z-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="HALF"/>
 <org.eventb.core.constant name="_Gf1u8J-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="CLOSED"/>
-<org.eventb.core.axiom name="_Gf1u8Z-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="axm9" org.eventb.core.predicate="finite(DOOR_STATE)"/>
-<org.eventb.core.axiom name="_Gf2WAJ-eEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(DOOR_STATE, {OPEN}, {HALF}, {CLOSED})"/>
+<org.eventb.core.axiom name="_dFdewKFQEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="door_finite" org.eventb.core.predicate="finite(DOOR_STATE)"/>
+<org.eventb.core.axiom name="_dFeF0KFQEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="door" org.eventb.core.predicate="partition(DOOR_STATE, {OPEN}, {HALF}, {CLOSED})"/>
 </org.eventb.core.contextFile>

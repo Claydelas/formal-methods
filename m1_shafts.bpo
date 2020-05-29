@@ -17,8 +17,8 @@
 <org.eventb.core.poIdentifier name="SHAFTS" org.eventb.core.type="ℙ(SHAFTS)"/>
 <org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="SHAFTS"/>
 <org.eventb.core.poIdentifier name="UP" org.eventb.core.type="SHAFTS"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWI59FEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_A8RWJJ9FEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO\" org.eventb.core.predicate="finite(SHAFTS)" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy9zQKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="CABIN_FLOO]" org.eventb.core.predicate="partition(SHAFTS,{UP},{DOWN})" org.eventb.core.source="/MULTI-Elevator/m1_shafts_context.buc|org.eventb.core.contextFile#m1_shafts_context|org.eventb.core.axiom#_Zy-aUKFQEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/MULTI-Elevator/m1_shafts.bpo|org.eventb.core.poFile#m1_shafts|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>

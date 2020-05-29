@@ -28,9 +28,8 @@
 <org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR_STATE"/>
 <org.eventb.core.poIdentifier name="HALF" org.eventb.core.type="DOOR_STATE"/>
 <org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="DOOR_STATE"/>
+<org.eventb.core.poPredicate name="MOTOR_STATH" org.eventb.core.predicate="finite(DOOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m3_door_context.buc|org.eventb.core.contextFile#m3_door_context|org.eventb.core.axiom#_dFdewKFQEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="MOTOR_STATI" org.eventb.core.predicate="partition(DOOR_STATE,{OPEN},{HALF},{CLOSED})" org.eventb.core.source="/MULTI-Elevator/m3_door_context.buc|org.eventb.core.contextFile#m3_door_context|org.eventb.core.axiom#_dFeF0KFQEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m3_door_context.bpo|org.eventb.core.poFile#m3_door_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(DOOR_STATE)" org.eventb.core.source="/MULTI-Elevator/m3_door_context.buc|org.eventb.core.contextFile#m3_door_context|org.eventb.core.axiom#_dFdewKFQEeq6js3PozKjqQ"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(DOOR_STATE,{OPEN},{HALF},{CLOSED})" org.eventb.core.source="/MULTI-Elevator/m3_door_context.buc|org.eventb.core.contextFile#m3_door_context|org.eventb.core.axiom#_dFeF0KFQEeq6js3PozKjqQ"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MULTI-Elevator/m5_impl_context.bpo|org.eventb.core.poFile#m5_impl_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
 </org.eventb.core.poFile>
