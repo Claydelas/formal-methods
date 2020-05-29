@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590717728868" org.eventb.texttools.text_representation="context m1_shafts_context extends m0_cabins_context&#10;&#10;sets SHAFTS&#10;&#10;constants UP DOWN&#10;&#10;axioms&#10;@shaft_finite finite(SHAFTS)&#10;@shafts partition(SHAFTS, {UP}, {DOWN})&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1590748887273" org.eventb.texttools.text_representation="context m1_shafts_context extends m0_cabins_context&#10;&#10;sets SHAFTS&#10;&#10;constants UP DOWN&#10;&#10;axioms&#10;@shaft_finite finite(SHAFTS)&#10;@shafts partition(SHAFTS, {UP}, {DOWN}) //REQ 2&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="_IuJPsJ6EEeq9QKfOiT4EOw" org.eventb.core.target="m0_cabins_context"/>
 <org.eventb.core.carrierSet name="_A8RWIJ9FEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="SHAFTS"/>
 <org.eventb.core.constant name="_A8RWIZ9FEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="UP"/>
 <org.eventb.core.constant name="_A8RWIp9FEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.identifier="DOWN"/>
 <org.eventb.core.axiom name="_Zy9zQKFQEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="shaft_finite" org.eventb.core.predicate="finite(SHAFTS)"/>
-<org.eventb.core.axiom name="_Zy-aUKFQEeq6js3PozKjqQ" org.eventb.core.generated="false" org.eventb.core.label="shafts" org.eventb.core.predicate="partition(SHAFTS, {UP}, {DOWN})"/>
+<org.eventb.core.axiom name="_Zy-aUKFQEeq6js3PozKjqQ" org.eventb.core.comment="REQ 2" org.eventb.core.generated="false" org.eventb.core.label="shafts" org.eventb.core.predicate="partition(SHAFTS, {UP}, {DOWN})"/>
 </org.eventb.core.contextFile>
