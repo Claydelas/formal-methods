@@ -122,6 +122,7 @@
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="shaft(cabin)=DOWN" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_ogowEJ94Eeq6js3PozKjqQ|org.eventb.core.guard#_0DPU8J-WEeq6js3PozKjqQ"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(shaft)∧shaft(c)=UP⇒floor(c)≠0" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_ogowEJ94Eeq6js3PozKjqQ|org.eventb.core.guard#_0DP8AJ-WEeq6js3PozKjqQ"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="motor(cabin)=ON" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_dgLiQJ-XEeq6js3PozKjqQ|org.eventb.core.guard#_54qI0J-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_schedule)∧shaft(c)=DOWN⇒0∉cabin_schedule[{c}]" org.eventb.core.source="/MULTI-Elevator/m4_buttons.bum|org.eventb.core.machineFile#m4_buttons|org.eventb.core.event#_ez6bAJ-XEeq6js3PozKjqU|org.eventb.core.guard#_-enjkKGXEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTm4_buttons_contex~" org.eventb.core.parentSet="/MULTI-Elevator/m5_impl.bpo|org.eventb.core.poFile#m5_impl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
@@ -132,6 +133,7 @@
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="shaft(cabin)=UP" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_ogmT0J94Eeq6js3PozKjqQ|org.eventb.core.guard#_0DM4sJ-WEeq6js3PozKjqQ"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(shaft)∧shaft(c)=DOWN⇒floor(c)≠TOP_FLOOR" org.eventb.core.source="/MULTI-Elevator/m1_shafts.bum|org.eventb.core.machineFile#m1_shafts|org.eventb.core.event#_ogmT0J94Eeq6js3PozKjqQ|org.eventb.core.guard#_0DNfwJ-WEeq6js3PozKjqQ"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="motor(cabin)=ON" org.eventb.core.source="/MULTI-Elevator/m2_motor.bum|org.eventb.core.machineFile#m2_motor|org.eventb.core.event#_dgMJUJ-XEeq6js3PozKjqQ|org.eventb.core.guard#_54rW8J-ZEeq6js3PozKjqQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀c⦂CABINS·c∈dom(cabin_schedule)∧shaft(c)=UP⇒TOP_FLOOR∉cabin_schedule[{c}]" org.eventb.core.source="/MULTI-Elevator/m4_buttons.bum|org.eventb.core.machineFile#m4_buttons|org.eventb.core.event#_ez6bAJ-XEeq6js3PozKjqV|org.eventb.core.guard#_-eqm4KGXEeq6js3PozKjqQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTm4_buttons_contey'" org.eventb.core.parentSet="/MULTI-Elevator/m5_impl.bpo|org.eventb.core.poFile#m5_impl|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="cabin" org.eventb.core.type="CABINS"/>
